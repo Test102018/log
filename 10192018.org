@@ -1,0 +1,30 @@
+
+* DONE run mnist example with ive tool
+  - State "DONE"       from "TODO"       [2018-10-19 Fri 11:18] \\
+    trained and tested successfully, but accuracy goes down.
+    Besides, for dim range [0,1024], won't work for Alexnet, works on lenet, but accuracy goes down in a way
+  - State "TODO"       from "NEXT"       [2018-10-19 Fri 10:58] \\
+    solved all compiling issue, start to run example
+  - State "NEXT"       from              [2018-10-18 Thu 15:08] \\
+    run example first, then apply it to our project
+** SOLVED modify network until it's compatible with ive tool
+   - State "SOLVED"     from "BUG"        [2018-10-19 Fri 11:10] \\
+     reduced all num_output, except for last one: 20/50/500/10 to 15/25/200/10
+   - State "BUG"        from              [2018-10-19 Fri 11:02] \\
+     fcl_input_dim(1800) is out of [1, 1024]
+  - modified kernel size of convolution_param in conv1 and conv2 from 5 to 3 
+* DONE customize lenet in terms of API reference P132
+  - State "DONE"       from "NEXT"       [2018-10-19 Fri 11:21] \\
+    customized by ive tool, but the suggestion of ive tool is not good for model network.
+  - State "NEXT"       from "TODO"       [2018-10-18 Thu 15:02] \\
+    have a meeting at 5, so do it tomorrow.
+  - State "TODO"       from              [2018-10-17 Wed 13:10] \\
+    supprot 8 layers at most, only support 3x3....
+* UPDATE convert caffemodel to bin
+  - State "UPDATE"     from "TODO"       [2018-10-19 Fri 16:23] \\
+    rebuild mnist according to guide, for now working on creating lmdb script
+  - State "TODO"       from              [2018-10-19 Fri 14:52] \\
+    check whether it can convert caffemodel to bin, though ive tool is not good
+* TODO use rgb samples to train on mnist
+  - State "TODO"       from              [2018-10-19 Fri 16:25] \\
+    after converting caffemodel to bin

@@ -1,0 +1,35 @@
+
+* NEXT run mnist example with ive tool
+  - State "NEXT"       from              [2018-10-18 Thu 15:08] \\
+    run example first, then apply it to our project
+* NEXT customize lenet in terms of API reference P132
+  - State "NEXT"       from "TODO"       [2018-10-18 Thu 15:02] \\
+    have a meeting at 5, so do it tomorrow.
+  - State "TODO"       from              [2018-10-17 Wed 13:10] \\
+    supprot 8 layers at most, only support 3x3....
+* SOLVED install all libs and solve bugs until customized caffe works
+  - State "SOLVED"     from "SOLVED"     [2018-10-19 Fri 10:55] \\
+    implemented SPAFN in .cpp, commented it out in .h, this function in .so file is wrong.
+  - State "SOLVED"     from "BUG"        [2018-10-18 Thu 14:53] \\
+    commented this function out and specify path and name directly. generated binary tool at ~/caffe-master/build/tools
+  - State "BUG"        from "SOLVED"     [2018-10-17 Wed 17:19] \\
+    SplitPathAndFileName
+  - State "SOLVED"     from "BUG"        [2018-10-17 Wed 15:59] \\
+    Q: Undefined reference to SplitPathAndFileName
+** DONE can see it in .h file, but it means this function was not defined in .so file, or this function name is inconsistent with the function name in .so file
+   - State "DONE"       from              [2018-10-18 Thu 10:39] \\
+     Tried all possible function name according to nm -D libive_tool_caffe.so, but it's not the issue of the inconsistence of function name. this .so file declared this function, but didn't define it.
+    - commented SPAFN, compiling is good. So, other functions in .so file are ok except for SPAFN.
+
+    Q: caffe cannot load shared libraries libopencv_core.so.3.0
+    S: 1, sudo ldconfig /usr/local/bin
+    2, sudo ldconfig /usr/local/cuda/lib64
+  - State "BUG"        from "TODO"       [2018-10-17 Wed 15:22] \\
+    .build_release/tools/ive_tool_caffe.o: In function `main':
+    ive_tool_caffe.cpp:(.text.startup+0x428): undefined reference to `SplitPathAndFileName(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)'
+    collect2: error: ld returned 1 exit status
+    Makefile:625: recipe for target '.build_release/tools/ive_tool_caffe.bin' failed
+    make: *** [.build_release/tools/ive_tool_caffe.bin] Error 1
+    make: *** Waiting for unfinished jobs....
+  - State "TODO"       from              [2018-10-17 Wed 13:10] \\
+    do it first

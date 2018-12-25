@@ -1,0 +1,13 @@
+
+* DONE crop plate and other features
+  - State "DONE"       from              [2018-12-20 Thu 17:12] \\
+    crop with GIMP
+* DONE convert samples to 1x8
+  - State "DONE"       from              [2018-12-20 Thu 17:12] \\
+    convert samples from 16x48 to 1x8
+* DONE train cropped plate samples
+  - State "DONE"       from              [2018-12-20 Thu 17:13] \\
+    the accuracy of category plate is 1, others are over 0.8
+* IN-PROGRESS port PC svm to camera
+  - State "IN-PROGRESS" from              [2018-12-20 Thu 17:14] \\
+    modified sample_ive_svm.c, correct all parameters. convert all samples to binary file, because U8C1 refers to binary files, not jpg. However, camera still cannot predict correctly.

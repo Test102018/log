@@ -1,0 +1,34 @@
+
+* CANCELED build ive environment on another pc
+  - State "CANCELED"   from "IN-PROGRESS" [2018-11-02 Fri 14:02] \\
+    don't need for now
+  - State "IN-PROGRESS" from "TODO"       [2018-10-26 Fri 16:18] \\
+    boost is ok, but opencv has make issue
+  - State "TODO"       from              [2018-10-25 Thu 17:34] \\
+    set up ive, test prediction time
+* DONE test rgb time
+  - State "DONE"       from "TODO"       [2018-10-29 Mon 15:03] \\
+    time is 0.6 ms per image
+  - State "TODO"       from              [2018-10-29 Mon 10:59] \\
+    test Dollar rgb time
+* DONE learn (opencv)SVM according to pdf guide
+  - State "DONE"       from "TODO"       [2018-11-02 Fri 14:03] \\
+    solve all issues in code so that it can split images & train svm & predict
+  - State "TODO"       from              [2018-10-29 Mon 11:03] \\
+    use cnn to extract features, then use svm to predict, but this svm is a part of opencv.
+* DONE add r,g,b to mnist samples
+  - State "DONE"       from "IN-PROGRESS" [2018-11-02 Fri 14:02] \\
+    done
+  - State "IN-PROGRESS" from "TODO"       [2018-10-29 Mon 15:13] \\
+    if [0,0,0], replace with 
+    [255,0,0] - r
+    [0,255,0] - g
+    [0,0,255] - b
+  - State "TODO"       from              [2018-10-29 Mon 11:01] \\
+    turn mnist samples to rgb images, extend categories like red0, green0, blue0. Then, test accuracy and time.
+* IN-PROGRESS test rgb bin file on camera
+  - State "IN-PROGRESS" from "TODO"       [2018-10-29 Mon 15:04] \\
+    no source code, cannot test with bin file in camera
+  - State "TODO"       from              [2018-10-29 Mon 11:11] \\
+    after solving nfs issue, validate rgb bin file
+* learn HOG algorithm in OpenCV

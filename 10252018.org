@@ -1,0 +1,29 @@
+
+* SOLVED add a 3x3 conv kernel
+  - State "SOLVED"     from "BUG"        [2018-10-25 Thu 10:20] \\
+    ip1 in train.prototxt received pool3, but ip1 in deploy.prototxt received pool2
+  - State "BUG"        from "TODO"       [2018-10-22 Mon 14:18] \\
+    ip1 layer has an issue when predict with deploy.prototxt, it shows "copy 0 weights error"
+  - State "TODO"       from              [2018-10-22 Mon 09:28] \\
+    add a 3x3 to make up for removing 5x5
+* SOLVED convert rgb lenet to bin file
+  - State "SOLVED"     from "TODO"       [2018-10-25 Thu 10:42] \\
+    corrected lmdb path in script
+  - State "TODO"       from              [2018-10-25 Thu 10:29] \\
+    correct lmdb path in terms of the guide
+* IN-PROGRESS solve nfs connection issue
+  - State "IN-PROGRESS" from "IN-PROGRESS" [2018-10-25 Thu 14:13] \\
+    tried all methods, still got *permission denied* issue
+  - State "IN-PROGRESS" from "TODO"       [2018-10-25 Thu 14:12] \\
+    don't have *apt* and *apt-get* command, cannot install tft or reinstall nfs
+  - State "TODO"       from              [2018-10-25 Thu 10:30] \\
+    even under root, still got permission denied issue
+* TODO lenet can train rgb, alxnet train gray?
+  - State "TODO"       from              [2018-10-25 Thu 10:43] \\
+    try it
+* TODO test prediction time on pc
+  - State "TODO"       from              [2018-10-25 Thu 14:14] \\
+    test on 1060, then worse one
+* TODO build ive environment on another pc
+  - State "TODO"       from              [2018-10-25 Thu 17:34] \\
+    set up ive, test prediction time

@@ -1,0 +1,40 @@
+
+* SOLVED solve nfs connection issue
+  - State "SOLVED"     from "UPDATE"     [2018-10-29 Mon 14:00] \\
+    mount -t nfs -o nolock 192.168.1.151:/nfsroot /mnt
+  - State "UPDATE"     from "UPDATE"     [2018-10-29 Mon 13:08] \\
+    nfs version depends on param vers=3 or vers=4
+  - State "UPDATE"     from "IN-PROGRESS" [2018-10-29 Mon 11:44] \\
+    mount -t -maproot=root -o proto=tcp,port=2049 192.168.1.151:/nfsroot /mnt/nfs
+  - State "IN-PROGRESS" from "IN-PROGRESS" [2018-10-25 Thu 14:13] \\
+    tried all methods, still got *permission denied* issue
+  - State "IN-PROGRESS" from "TODO"       [2018-10-25 Thu 14:12] \\
+    don't have *apt* and *apt-get* command, cannot install tft or reinstall nfs
+  - State "TODO"       from              [2018-10-25 Thu 10:30] \\
+    even under root, still got permission denied issue
+* IN-PROGRESS build ive environment on another pc
+  - State "IN-PROGRESS" from "TODO"       [2018-10-26 Fri 16:18] \\
+    boost is ok, but opencv has make issue
+  - State "TODO"       from              [2018-10-25 Thu 17:34] \\
+    set up ive, test prediction time
+* DONE test rgb time
+  - State "DONE"       from "TODO"       [2018-10-29 Mon 15:03] \\
+    time is 0.6 ms per image
+  - State "TODO"       from              [2018-10-29 Mon 10:59] \\
+    test Dollar rgb time
+* TODO learn (opencv)SVM according to pdf guide
+  - State "TODO"       from              [2018-10-29 Mon 11:03] \\
+    use cnn to extract features, then use svm to predict, but this svm is a part of opencv.
+* IN-PROGRESS add r,g,b to mnist samples
+  - State "IN-PROGRESS" from "TODO"       [2018-10-29 Mon 15:13] \\
+    if [0,0,0], replace with 
+    [255,0,0] - r
+    [0,255,0] - g
+    [0,0,255] - b
+  - State "TODO"       from              [2018-10-29 Mon 11:01] \\
+    turn mnist samples to rgb images, extend categories like red0, green0, blue0. Then, test accuracy and time.
+* IN-PROGRESS test rgb bin file on camera
+  - State "IN-PROGRESS" from "TODO"       [2018-10-29 Mon 15:04] \\
+    no source code, cannot test with bin file in camera
+  - State "TODO"       from              [2018-10-29 Mon 11:11] \\
+    after solving nfs issue, validate rgb bin file

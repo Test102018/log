@@ -1,0 +1,18 @@
+
+* alexnet [/]
+** TODO modify output_num
+   - State "TODO"       from "DONE"       [2018-10-10 Wed 10:04] \\
+     1, 20/60... or lower than this value, because image is too small
+     - loss is oscillating at 2.4
+     2, 16/48... or as mentioned above
+     - tried this set of numbers, but still has a oscillation at 2.4
+** TODO modify filter size
+   - State "TODO"       from "TODO"       [2018-10-10 Wed 10:07] \\
+     1, for 32x32 image, filter size must less than 7, so 7 first
+     2, size = 5
+     3, size = 3
+   - 
+* lenet [0/0]
+- doesn't work, still oscillating at 2.4
+* samples [0/0]
+- resize samples of last project to 32x32, adjust parameters until works

@@ -1,0 +1,24 @@
+
+* IN-PROGRESS solve nfs connection issue
+  - State "IN-PROGRESS" from "IN-PROGRESS" [2018-10-25 Thu 14:13] \\
+    tried all methods, still got *permission denied* issue
+  - State "IN-PROGRESS" from "TODO"       [2018-10-25 Thu 14:12] \\
+    don't have *apt* and *apt-get* command, cannot install tft or reinstall nfs
+  - State "TODO"       from              [2018-10-25 Thu 10:30] \\
+    even under root, still got permission denied issue
+* DONE alexnet train gray?
+  - State "DONE"       from "TODO"       [2018-10-26 Fri 16:17] \\
+    alexnet can train with gray image, but it's hard to adjust params
+  - State "TODO"       from              [2018-10-25 Thu 10:43] \\
+    try it
+* DONE test prediction time on pc
+  - State "DONE"       from "TODO"       [2018-10-26 Fri 14:05] \\
+    *cpu mode: 0.4 ms*
+    *gpu mode: 0.2 ms*
+  - State "TODO"       from              [2018-10-25 Thu 14:14] \\
+    test on 1060, then worse one
+* IN-PROGRESS build ive environment on another pc
+  - State "IN-PROGRESS" from "TODO"       [2018-10-26 Fri 16:18] \\
+    boost is ok, but opencv has make issue
+  - State "TODO"       from              [2018-10-25 Thu 17:34] \\
+    set up ive, test prediction time

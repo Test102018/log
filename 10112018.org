@@ -1,0 +1,31 @@
+
+* SOLVED samples [0/0]
+  - State "SOLVED"     from "DONE"       [2018-10-11 Thu 13:14] \\
+    solved after changing num_output
+- resize samples of last project to 32x32, adjust parameters until works
+- oscillating at 1.7
+  - tried to add more num_output, and it works
+* DONE replace samples
+  - State "DONE"       from              [2018-10-11 Thu 13:25] \\
+    finally, original set works, but this set has too large parameters, so, optimize it later
+- replace samples with new samples
+  - try 32/96 set -> oscillating between 3.2 and 1.7
+  - try 48/128 set -> oscillating between 3.2 and 1.7
+  - try half set -> oscillating between 3.2 and 1.8
+  - try origional set -> works, loss can reach 10e-5
+* test accuracy and optimize model [2/2]
+** DONE test accuracy
+   - State "DONE"       from              [2018-10-11 Thu 13:57] \\
+     accuracy is 1
+** DONE optimize model
+   - State "DONE"       from "TODO"       [2018-10-11 Thu 17:41] \\
+     it seems origional set + half fc6&7 -> highest accuracy
+   - State "TODO"       from              [2018-10-11 Thu 14:39] \\
+     try to reduce the number of parameter
+   - try 64/170 set and half fc6&7 -> accuracy = 0.1666
+   - try original set and half fc6&7 -> accuracy = 1, caffemodel size = 28.2
+   - try original set -> accuracy = 0.83, caffemodel size = 80.7
+   - try original set and 1/4 fc6&7 -> accuracy = 0.1666, caffemodel size = 14.5
+   - try original set and half fc6&7, but 1st k size is 7 -> accuracy = 0.833, caffemodel = 28.2
+   - try 80/214 set and half fc6&7, k size 7 -> accuracy = 0.1666, caffemodel = 25.1
+   - try all k size =3 -> accuracy = 0.1666, caffemodel size = 27.4

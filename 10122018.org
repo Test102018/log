@@ -1,0 +1,10 @@
+
+* test accuracy and optimize model [0/1]
+** TODO optimize model
+   continue reducing parameters
+* CANCELED generate alexnet by caffe python api
+  - State "CANCELED"   from "TODO"       [2018-10-12 Fri 12:47] \\
+    some keywords in alexnet repeated, but caffe api cannot solve repeated params, so cannot make it for now
+    - another way to implement it is file operation, read sample alexnet and modify params, then make a customized net file
+  - State "TODO"       from              [2018-10-12 Fri 12:45] \\
+    write codes to generate a customized net
