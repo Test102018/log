@@ -9,5 +9,7 @@
   - State "DONE"       from              [2018-12-20 Thu 17:13] \\
     the accuracy of category plate is 1, others are over 0.8
 * IN-PROGRESS port PC svm to camera
+  - State "IN-PROGRESS" from "IN-PROGRESS" [2018-12-24 Mon 16:58] \\
+    tried opencv2.4 and opencv3.0, have similar issue on camera
   - State "IN-PROGRESS" from              [2018-12-20 Thu 17:14] \\
     modified sample_ive_svm.c, correct all parameters. convert all samples to binary file, because U8C1 refers to binary files, not jpg. However, camera still cannot predict correctly.
